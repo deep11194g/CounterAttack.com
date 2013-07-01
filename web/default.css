@@ -1,0 +1,16 @@
+body {
+    background-image:url(images/background.png);
+    no-repeat;
+}
+
+h1 {
+    color:red;
+}
+
+h3 {
+    color:blue;
+}
+
+nav {
+    width:812px;
+}
