@@ -25,7 +25,7 @@
         <div id="signin">
             <img src="images/login.png">
             <h:javascript formName="LoginBean"/>
-            <h:form action="login.do" onsubmit="return validateLoginBean(this)">
+            <h:form action="signin.do" onsubmit="return validateLoginBean(this)">
                 <p><img src="images/login_username.png"><h:text property="name" style="font-size:20px;width:200px;height:50px;margin-left:10px;"/></p>
                 <p><img src="images/login_password.png"><h:password property="password" style="font-size:20px;width:200px;height:50px;margin-left:10px;"/></p>
                 <h:submit value="Log In" style="height:50px;width:80px;font-size:20px;"/>

@@ -7,6 +7,9 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="UploadAction" type="action.UploadAction"/>
+        <form-bean name="UploadBean" type="bean.UploadBean"/>
+        <form-bean name="ChangeDetailBean" type="bean.ChangeDetailBean"/>
         <form-bean name="SignUpAction" type="action.SignUpAction"/>
         <form-bean name="SignUpBean" type="bean.SignUpBean"/>
         <form-bean name="LoginAction" type="action.LoginAction"/>
@@ -22,13 +25,39 @@
         <forward name="welcome"  path="/Welcome.do"/>
     </global-forwards>
 
-    <action-mappings>
+    <action-mappings>      
+      
         <action input="/index.jsp" name="SignUpBean" path="/signup" scope="session" type="action.SignUpAction"/>
-        <action input="/index.jsp" name="LoginBean" path="/login" scope="session" type="action.LoginAction">
-            <forward name="menu" path="/menu.jsp"/>
+        <action input="/index.jsp" name="LoginBean" path="/signin" scope="session" type="action.LoginAction">
+            <forward name="admin" path="main_admin"/>
+            <forward name="user" path="main_user"/>            
         </action>
+        
+        <action path="/seeUsers" type="action.SeeUsersAction">
+            <forward name="showuser" path="seeUsers_admin"/> 
+        </action>
+        
+        <action path="/logout" type="action.Logout">
+            <forward name="logout2index" path="/index.jsp"/>
+        </action>
+        
+        <action path="/delete" type="action.DeleteAction">
+            <forward name="back2seeUsers" path="/seeUsers.do"/>
+        </action>
+        
+        <action path="/upgrade" type="action.UpgradeAction">
+            <forward name="back2seeUsers" path="/seeUsers.do"/>
+        </action>
+        
+        <action input="changeDetailUser" name="ChangeDetailBean" path="/changeDetail" scope="session" type="action.ChangeDetailAction">
+            <forward name="back2changeDetail" path="changeDetailUser"/>
+        </action>
+        <action input="/upload.jsp" name="UploadBean" path="/upload" scope="session" type="action.UploadAction">
+            <forward name="back2upload" path="/upload.jsp"/>
+        </action>
+                
     </action-mappings>
-    
+      
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
 
     <message-resources parameter="com/myapp/struts/ApplicationResource"/>    

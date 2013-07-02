@@ -21,7 +21,7 @@ public class LoginAction extends org.apache.struts.action.Action {
 
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bloggers", "root", "password");
-        PreparedStatement ps = con.prepareStatement("select * from login where name=? and password=?");
+        PreparedStatement ps = con.prepareStatement("select role from login where name=? and password=?");
         ps.setString(1, name);
         ps.setString(2, pass);
         ResultSet rs = ps.executeQuery();
@@ -29,7 +29,10 @@ public class LoginAction extends org.apache.struts.action.Action {
         if (rs.next()) {
             HttpSession hs = request.getSession(true);
             hs.setAttribute("name", name);
-                return mapping.findForward("menu");
+            if(rs.getString(1).equalsIgnoreCase("admin"))
+                return mapping.findForward("admin");
+            else
+                return mapping.findForward("user");
 
         } else {
             request.setAttribute("login_msg", "Invalid username or password");

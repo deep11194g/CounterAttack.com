@@ -4,33 +4,30 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
        "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
 
-
-<!--
-     This is a blank Tiles definition file with a commented example.
--->
-
 <tiles-definitions>
     
     <definition name="main_admin" path="/layout_admin.jsp">
-        <put name="head" value="/header_admin.jsp"/>
+        <put name="header_admin" value="/header_admin.jsp"/>
         <put name="menu" value="/menu.jsp"/>
         <put name="body" value="/home_admin.jsp"/>
         <put name="footer" value="/footer.jsp"/>
     </definition>
     
     <definition name="main_user" path="/layout_user.jsp">
-        <put name="head" value="/header_admin.jsp"/>
+        <put name="header_user" value="/header_user.jsp"/>
         <put name="menu" value="/menu.jsp"/>
         <put name="body" value="/home_user.jsp"/>
         <put name="footer" value="/footer.jsp"/>
     </definition>
     
-    
-    <!-- for next pages
-    <definition name="home_admin" extends="main_admin">
-        <put name="body" value="/next.jsp"/>
+    <definition name="seeUsers_admin" extends="main_admin">
+        <put name="body" value="/see_user.jsp"/>
     </definition>
-    -->
+    
+    <definition name="changeDetailUser" extends="main_user">
+        <put name="body" value="/change_detail_user.jsp"/>
+    </definition>
+        
     
     <!-- sample tiles definitions
     <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">

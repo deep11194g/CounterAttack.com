@@ -188,7 +188,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.struts.taglib.html.FormTag _jspx_th_h_form_0 = (org.apache.struts.taglib.html.FormTag) _jspx_tagPool_h_form_onsubmit_action.get(org.apache.struts.taglib.html.FormTag.class);
     _jspx_th_h_form_0.setPageContext(_jspx_page_context);
     _jspx_th_h_form_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_html_0);
-    _jspx_th_h_form_0.setAction("login.do");
+    _jspx_th_h_form_0.setAction("signin.do");
     _jspx_th_h_form_0.setOnsubmit("return validateLoginBean(this)");
     int _jspx_eval_h_form_0 = _jspx_th_h_form_0.doStartTag();
     if (_jspx_eval_h_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {

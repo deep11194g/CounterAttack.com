@@ -6,7 +6,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>layout_admin</title>
+        <title>Layout_Admin</title>
     </head>
     <body>
         <table width="100%" align="center">
