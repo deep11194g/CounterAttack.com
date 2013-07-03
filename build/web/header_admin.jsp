@@ -29,7 +29,7 @@
                 <li><img src="images/options/admin_option_head.png">
                     <ul>
                         <li><a href="seeUsers.do"><img src="images/options/see_details.png" style="margin-top:-5px"></a></li>
-                        <li><a href="#"><img src="images/options/u_upload_article.png" style="margin-top:-5px"></a></li>
+                        <li><a href="uploadAdmin.do"><img src="images/options/u_upload_article.png" style="margin-top:-5px"></a></li>
                         <li><a href="logout.do"><img src="images/options/logout.png" style="margin-top:-5px"></a></li>
                     </ul>
                 </li>

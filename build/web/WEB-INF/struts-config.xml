@@ -49,13 +49,23 @@
             <forward name="back2seeUsers" path="/seeUsers.do"/>
         </action>
         
-        <action input="changeDetailUser" name="ChangeDetailBean" path="/changeDetail" scope="session" type="action.ChangeDetailAction">
-            <forward name="back2changeDetail" path="changeDetailUser"/>
+        <action input="changeDetail_user" name="ChangeDetailBean" path="/changeDetail" scope="session" type="action.ChangeDetailAction">
+            <forward name="back2changeDetail" path="changeDetail_user"/>
         </action>
+        
+        <action path="/uploadAdmin" forward="upload_admin" />
+        <action path="/uploadUser" forward="upload_user" />
+        
         <action input="/upload.jsp" name="UploadBean" path="/upload" scope="session" type="action.UploadAction">
-            <forward name="back2upload" path="/upload.jsp"/>
+            <forward name="back2admin" path="upload_admin"/>
+            <forward name="back2user" path="upload_user"/>
         </action>
-                
+        
+        <action path="/articleList" type="action.ArticleListAction">
+            <forward name="articleListShowAdmin" path="articleList_admin"/>
+            <forward name="articleListShowUser" path="articleList_user"/>
+        </action>
+        
     </action-mappings>
       
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>

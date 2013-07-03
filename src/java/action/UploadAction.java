@@ -16,55 +16,60 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
 
 public class UploadAction extends org.apache.struts.action.Action {
-
-    private static final String SUCCESS = "success";
-
+    
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
         UploadBean ub = (UploadBean) form;
-
+        
         HttpSession hs = request.getSession(false);
         String name = (String) hs.getAttribute("name");
-
+        
         Class.forName("com.mysql.jdbc.Driver");
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bloggers", "root", "password");
-
-        PreparedStatement p = con.prepareStatement("select from role from login where name=?");
-        p.setString(1, name);
-        ResultSet rs = p.executeQuery();
-
+        
+        HttpSession hss = request.getSession(false);
+        String role = (String) hss.getAttribute("role");
+        
         FormFile file = ub.getUpArticle();
-        String filename = file.getFileName();
+        String filename = (file.getFileName()).substring(0, 7) + "@" + role.charAt(0) + "";
         String path = getServlet().getServletContext().getRealPath("/") + "upload";
         File uploadfolder = new File(path);
         if (!uploadfolder.exists()) {
             uploadfolder.mkdir();
         }
-        FileOutputStream fos = new FileOutputStream(path + "/" + filename);
+        FileOutputStream fos = new FileOutputStream(path + "/" + filename + ".txt");
         fos.write(file.getFileData());
         fos.close();
-
+        
         PreparedStatement ps = con.prepareStatement("insert into uploadArticle values(?,?,?)");
-
+        
         ps.setString(1, filename);
         ps.setString(2, name);
-
-        if (rs.getString(1).equalsIgnoreCase("guest")) {
-            ps.setString(3, "no");
+        
+        
+        if (role.equalsIgnoreCase("guest")) {
+            ps.setString(3, "no");            
         } else {
             ps.setString(3, "yes");
         }
-
+        
         int a = ps.executeUpdate();
         if (a == 1) {
-            if (rs.getString(1).equalsIgnoreCase("guest")) 
             request.setAttribute("upload_msg", "Article Uploaded.");
-        } else
+        } else {
             request.setAttribute("upload_msg", "Error while uploading.");
-                
-            return mapping.findForward("back2upload");
+        }
+        
+        if (role.equalsIgnoreCase("guest")) {
+            request.setAttribute("approval_msg", "Article yet to be approved by moderater.");
+            return mapping.findForward("back2user");
+        } else {
+            request.setAttribute("approval_msg", "Article Published.");
+            return mapping.findForward("back2admin");
+        }
+        
         
     }
 }

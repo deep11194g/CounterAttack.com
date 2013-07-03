@@ -16,7 +16,8 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_dependants.add("/WEB-INF/struts-html.tld");
   }
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_form_enctype_action;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_html;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_form_method_enctype_action;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_file_style_property_nobody;
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_submit_value_style_nobody;
 
@@ -27,13 +28,15 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
   }
 
   public void _jspInit() {
-    _jspx_tagPool_h_form_enctype_action = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_h_html = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_h_form_method_enctype_action = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_h_file_style_property_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
     _jspx_tagPool_h_submit_value_style_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
-    _jspx_tagPool_h_form_enctype_action.release();
+    _jspx_tagPool_h_html.release();
+    _jspx_tagPool_h_form_method_enctype_action.release();
     _jspx_tagPool_h_file_style_property_nobody.release();
     _jspx_tagPool_h_submit_value_style_nobody.release();
   }
@@ -65,20 +68,9 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Upload</title>\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        <center>\n");
-      out.write("        ");
-      if (_jspx_meth_h_form_0(_jspx_page_context))
+      if (_jspx_meth_h_html_0(_jspx_page_context))
         return;
-      out.write("\n");
-      out.write("        </center>   \n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      out.write('\n');
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -92,15 +84,53 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
     }
   }
 
-  private boolean _jspx_meth_h_form_0(PageContext _jspx_page_context)
+  private boolean _jspx_meth_h_html_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  h:html
+    org.apache.struts.taglib.html.HtmlTag _jspx_th_h_html_0 = (org.apache.struts.taglib.html.HtmlTag) _jspx_tagPool_h_html.get(org.apache.struts.taglib.html.HtmlTag.class);
+    _jspx_th_h_html_0.setPageContext(_jspx_page_context);
+    _jspx_th_h_html_0.setParent(null);
+    int _jspx_eval_h_html_0 = _jspx_th_h_html_0.doStartTag();
+    if (_jspx_eval_h_html_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("    <head>\n");
+        out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+        out.write("        <title>Upload</title>\n");
+        out.write("    </head>\n");
+        out.write("    <body>\n");
+        out.write("        <center>\n");
+        out.write("        ");
+        if (_jspx_meth_h_form_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_h_html_0, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("        </center>   \n");
+        out.write("    </body>\n");
+        int evalDoAfterBody = _jspx_th_h_html_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_h_html_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_h_html.reuse(_jspx_th_h_html_0);
+      return true;
+    }
+    _jspx_tagPool_h_html.reuse(_jspx_th_h_html_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_h_form_0(javax.servlet.jsp.tagext.JspTag _jspx_th_h_html_0, PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  h:form
-    org.apache.struts.taglib.html.FormTag _jspx_th_h_form_0 = (org.apache.struts.taglib.html.FormTag) _jspx_tagPool_h_form_enctype_action.get(org.apache.struts.taglib.html.FormTag.class);
+    org.apache.struts.taglib.html.FormTag _jspx_th_h_form_0 = (org.apache.struts.taglib.html.FormTag) _jspx_tagPool_h_form_method_enctype_action.get(org.apache.struts.taglib.html.FormTag.class);
     _jspx_th_h_form_0.setPageContext(_jspx_page_context);
-    _jspx_th_h_form_0.setParent(null);
+    _jspx_th_h_form_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_html_0);
     _jspx_th_h_form_0.setAction("upload.do");
+    _jspx_th_h_form_0.setMethod("post");
     _jspx_th_h_form_0.setEnctype("multipart/form-data");
     int _jspx_eval_h_form_0 = _jspx_th_h_form_0.doStartTag();
     if (_jspx_eval_h_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
@@ -114,7 +144,7 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
         if (_jspx_meth_h_submit_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_h_form_0, _jspx_page_context))
           return true;
         out.write("\n");
-        out.write("            <br><font color=\"red\" size=\"5\">");
+        out.write("            <br><font color=\"red\" size=\"5\"> ");
         out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.upload_msg}", java.lang.String.class, (PageContext)_jspx_page_context, null));
         out.write(" </font>\n");
         out.write("        ");
@@ -124,10 +154,10 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
       } while (true);
     }
     if (_jspx_th_h_form_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_h_form_enctype_action.reuse(_jspx_th_h_form_0);
+      _jspx_tagPool_h_form_method_enctype_action.reuse(_jspx_th_h_form_0);
       return true;
     }
-    _jspx_tagPool_h_form_enctype_action.reuse(_jspx_th_h_form_0);
+    _jspx_tagPool_h_form_method_enctype_action.reuse(_jspx_th_h_form_0);
     return false;
   }
 
@@ -139,8 +169,8 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.struts.taglib.html.FileTag _jspx_th_h_file_0 = (org.apache.struts.taglib.html.FileTag) _jspx_tagPool_h_file_style_property_nobody.get(org.apache.struts.taglib.html.FileTag.class);
     _jspx_th_h_file_0.setPageContext(_jspx_page_context);
     _jspx_th_h_file_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_form_0);
-    _jspx_th_h_file_0.setProperty("");
-    _jspx_th_h_file_0.setStyle("font-size:20px;width:200px;height:50px;");
+    _jspx_th_h_file_0.setProperty("upArticle");
+    _jspx_th_h_file_0.setStyle("font-size:20px;width:300px;height:50px;");
     int _jspx_eval_h_file_0 = _jspx_th_h_file_0.doStartTag();
     if (_jspx_th_h_file_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_h_file_style_property_nobody.reuse(_jspx_th_h_file_0);
@@ -159,7 +189,7 @@ public final class upload_jsp extends org.apache.jasper.runtime.HttpJspBase
     _jspx_th_h_submit_0.setPageContext(_jspx_page_context);
     _jspx_th_h_submit_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_form_0);
     _jspx_th_h_submit_0.setValue("Submit article");
-    _jspx_th_h_submit_0.setStyle("height:50px;width:80px;font-size:20px;");
+    _jspx_th_h_submit_0.setStyle("height:50px;width:150px;font-size:20px;");
     int _jspx_eval_h_submit_0 = _jspx_th_h_submit_0.doStartTag();
     if (_jspx_th_h_submit_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_h_submit_value_style_nobody.reuse(_jspx_th_h_submit_0);

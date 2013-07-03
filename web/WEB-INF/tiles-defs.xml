@@ -24,11 +24,25 @@
         <put name="body" value="/see_user.jsp"/>
     </definition>
     
-    <definition name="changeDetailUser" extends="main_user">
+    <definition name="changeDetail_user" extends="main_user">
         <put name="body" value="/change_detail_user.jsp"/>
     </definition>
-        
     
+    <definition name="upload_admin" extends="main_admin">
+        <put name="body" value="/upload.jsp"/>
+    </definition>
+    
+    <definition name="upload_user" extends="main_user">
+        <put name="body" value="/upload.jsp"/>
+    </definition>
+    
+    <definition name="articleList_admin" extends="main_admin">
+        <put name="body" value="/article_list.jsp"/>
+    </definition>
+    
+    <definition name="articleList_user" extends="main_user">
+        <put name="body" value="/article_list.jsp"/>
+    </definition>
     <!-- sample tiles definitions
     <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
         <put name="title"  value="Sample Page Title" />

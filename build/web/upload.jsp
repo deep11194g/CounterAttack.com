@@ -1,18 +1,20 @@
 <%@taglib prefix="h" uri="/WEB-INF/struts-html.tld" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<h:html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Upload</title>
     </head>
     <body>
         <center>
-        <h:form action="upload.do" enctype="multipart/form-data">
-            Select: <h:file property="" style="font-size:20px;width:200px;height:50px;"/> (.txt only)<br>
-            <h:submit value="Submit article" style="height:50px;width:80px;font-size:20px;"/>
-            <br><font color="red" size="5">${requestScope.upload_msg} </font>
+        <h:form action="upload.do" method="post" enctype="multipart/form-data">
+            Select: <h:file property="upArticle" style="font-size:20px;width:300px;height:50px;"/>
+                    <font color="red" size="5">(.txt only)<br><br>
+            <h:submit value="Submit article" style="height:30px;width:130px;font-size:20px;"/>
+            <br><font color="blue" size="5"> ${requestScope.upload_msg} </font>
+            <br><font color="red" size="4"> ${requestScope.approval_msg} </font>
         </h:form>
         </center>   
     </body>
-</html>
+</h:html>

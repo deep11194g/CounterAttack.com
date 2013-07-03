@@ -29,6 +29,7 @@ public class LoginAction extends org.apache.struts.action.Action {
         if (rs.next()) {
             HttpSession hs = request.getSession(true);
             hs.setAttribute("name", name);
+            hs.setAttribute("role", rs.getString(1));
             if(rs.getString(1).equalsIgnoreCase("admin"))
                 return mapping.findForward("admin");
             else
