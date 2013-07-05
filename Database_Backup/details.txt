@@ -1,0 +1,5 @@
+Database name : Bloggers
+Tables : login, uploadArticle
+
+username : root
+password : password
