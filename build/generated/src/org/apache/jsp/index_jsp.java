@@ -108,7 +108,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\n");
         out.write("    <head>\n");
         out.write("        <title>Index</title>\n");
-        out.write("        <link rel=\"stylesheet\" type=\"text/css\"  />\n");
+        out.write("        <link rel=\"stylesheet\" type=\"text/css\" href=\"default.css\"/>\n");
         out.write("        <style>\n");
         out.write("            #signin{position:absolute;right:20px;width:600px;height:300px;text-align:right;}\n");
         out.write("            #newusr{position:relative;top:400px;margin-left:auto;margin-right:auto;width:1200px;height:80px;}\n");
@@ -148,7 +148,6 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("     \n");
         out.write("    </body>\n");
         out.write("\n");
-        out.write("</");
         int evalDoAfterBody = _jspx_th_h_html_0.doAfterBody();
         if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
           break;

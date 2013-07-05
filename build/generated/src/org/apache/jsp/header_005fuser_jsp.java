@@ -69,11 +69,12 @@ public final class header_005fuser_jsp extends org.apache.jasper.runtime.HttpJsp
       out.write("        \n");
       out.write("        <div style=\"float:right;height:30px\">\n");
       out.write("            <ul id=\"nav\" class=\"drop\">\n");
+      out.write("                <li><img src=\"images/home_tab.png\" style=\"margin-right:5px;\"></li>\n");
       out.write("                <li><img src=\"images/options/user_option_head.png\">\n");
       out.write("                    <ul>\n");
-      out.write("                        <li><img src=\"images/options/u_change_details.png\" style=\"margin-top:-5px\"></li>\n");
-      out.write("                        <li><img src=\"images/options/u_upload_article.png\" style=\"margin-top:-5px\"></li>\n");
-      out.write("                        <li><img src=\"images/options/logout.png\" style=\"margin-top:-5px\"></li>\n");
+      out.write("                        <li><a href=\"changeDetail.do\"><img src=\"images/options/u_change_details.png\" style=\"margin-top:-4px\"></a></li>\n");
+      out.write("                        <li><a href=\"uploadUser.do\"><img src=\"images/options/u_upload_article.png\" style=\"margin-top:-4px\"></a></li>\n");
+      out.write("                        <li><a href=\"logout.do\"><img src=\"images/options/logout.png\" style=\"margin-top:-4px\"></a></li>\n");
       out.write("                    </ul>\n");
       out.write("                </li>\n");
       out.write("            </ul>\n");

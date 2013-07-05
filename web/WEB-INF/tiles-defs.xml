@@ -36,6 +36,10 @@
         <put name="body" value="/upload.jsp"/>
     </definition>
     
+    <definition name="showPending_admin" extends="main_admin">
+        <put name="body" value="/show_pending.jsp"/>
+    </definition>
+    
     <definition name="articleList_admin" extends="main_admin">
         <put name="body" value="/article_list.jsp"/>
     </definition>
@@ -43,6 +47,23 @@
     <definition name="articleList_user" extends="main_user">
         <put name="body" value="/article_list.jsp"/>
     </definition>
+    
+    <definition name="articleDisplay_admin" extends="main_admin">
+        <put name="body" value="/article_display.jsp"/>
+    </definition>
+    
+    <definition name="articleDisplay_user" extends="main_user">
+        <put name="body" value="/article_display.jsp"/>
+    </definition>
+    
+    <definition name="trolls_admin" extends="main_admin">
+        <put name="body" value="/trolls.jsp"/>
+    </definition>
+    
+    <definition name="trolls_user" extends="main_user">
+        <put name="body" value="/trolls.jsp"/>
+    </definition>
+    
     <!-- sample tiles definitions
     <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
         <put name="title"  value="Sample Page Title" />

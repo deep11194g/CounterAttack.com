@@ -27,6 +27,6 @@
         </table>
         <center><br><br><font color="red" size="5">${requestScope.del_msg} </font></center>
         <center><br><br><font color="red" size="5">${requestScope.up_msg} </font></center>
-        
+        <br><br><br>
     </body>
 </html>

@@ -5,7 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Landing</title>
-        <link rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="default.css"/>
     </head>
     <body>
         
@@ -15,7 +15,7 @@
         
         <br><br><br><br><br><br><br>
         <center>
-            <a href="index.jsp">CLICK HERE TO ENTER OUR BLOG</a>       
+            <a href="index.do"><font color="blue" size="5"><b>CLICK HERE TO ENTER OUR BLOG</b></font></a>       
         </center>
     
         

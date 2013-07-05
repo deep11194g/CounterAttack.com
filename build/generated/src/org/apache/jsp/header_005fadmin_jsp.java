@@ -69,11 +69,12 @@ public final class header_005fadmin_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("        \n");
       out.write("        <div style=\"float:right;height:30px\">\n");
       out.write("            <ul id=\"nav\" class=\"drop\">\n");
+      out.write("                <li><a href=\"signin.do\"><img src=\"images/home_tab.png\" style=\"margin-right:5px;\"></a></li>\n");
       out.write("                <li><img src=\"images/options/admin_option_head.png\">\n");
       out.write("                    <ul>\n");
-      out.write("                        <li><a href=\"#\"><img src=\"images/options/u_change_details.png\" style=\"margin-top:-5px\"></a></li>\n");
-      out.write("                        <li><a href=\"#\"><img src=\"images/options/u_upload_article.png\" style=\"margin-top:-5px\"></a></li>\n");
-      out.write("                        <li><a href=\"#\"><img src=\"images/options/logout.png\" style=\"margin-top:-5px\"></a></li>\n");
+      out.write("                        <li><a href=\"seeUsers.do\"><img src=\"images/options/see_details.png\" style=\"margin-top:-3px\"></a></li>\n");
+      out.write("                        <li><a href=\"uploadAdmin.do\"><img src=\"images/options/u_upload_article.png\" style=\"margin-top:-3px\"></a></li>\n");
+      out.write("                        <li><a href=\"logout.do\"><img src=\"images/options/logout.png\" style=\"margin-top:-3px\"></a></li>\n");
       out.write("                    </ul>\n");
       out.write("                </li>\n");
       out.write("            </ul>\n");
@@ -81,8 +82,6 @@ public final class header_005fadmin_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("    </body>\n");
       out.write("</html>\n");
-      out.write("\n");
-      out.write("\n");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

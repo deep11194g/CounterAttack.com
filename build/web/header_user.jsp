@@ -26,11 +26,12 @@
         
         <div style="float:right;height:30px">
             <ul id="nav" class="drop">
+                <li><a href="signin.do"><img src="images/home_tab.png" style="margin-right:5px;"></a></li>
                 <li><img src="images/options/user_option_head.png">
                     <ul>
-                        <li><a href="changeDetail.do"><img src="images/options/u_change_details.png" style="margin-top:-5px"></a></li>
-                        <li><a href="uploadUser.do"><img src="images/options/u_upload_article.png" style="margin-top:-5px"></a></li>
-                        <li><a href="logout.do"><img src="images/options/logout.png" style="margin-top:-5px"></a></li>
+                        <li><a href="changeDetail.do"><img src="images/options/u_change_details.png" style="margin-top:-4px"></a></li>
+                        <li><a href="uploadUser.do"><img src="images/options/u_upload_article.png" style="margin-top:-4px"></a></li>
+                        <li><a href="logout.do"><img src="images/options/logout.png" style="margin-top:-4px"></a></li>
                     </ul>
                 </li>
             </ul>

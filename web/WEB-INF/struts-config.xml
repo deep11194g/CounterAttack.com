@@ -7,6 +7,7 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="TrollAction" type="action.TrollAction"/>
         <form-bean name="UploadAction" type="action.UploadAction"/>
         <form-bean name="UploadBean" type="bean.UploadBean"/>
         <form-bean name="ChangeDetailBean" type="bean.ChangeDetailBean"/>
@@ -26,8 +27,15 @@
     </global-forwards>
 
     <action-mappings>      
+    
+        <action path="/index" type="action.IndexAction">
+            <forward name="landing2index" path="/signin.do"/>
+            <forward name="homeAdmin" path="main_admin"/>
+            <forward name="homeUser" path="main_user"/>
+        </action>
       
         <action input="/index.jsp" name="SignUpBean" path="/signup" scope="session" type="action.SignUpAction"/>
+        
         <action input="/index.jsp" name="LoginBean" path="/signin" scope="session" type="action.LoginAction">
             <forward name="admin" path="main_admin"/>
             <forward name="user" path="main_user"/>            
@@ -57,14 +65,37 @@
         <action path="/uploadUser" forward="upload_user" />
         
         <action input="/upload.jsp" name="UploadBean" path="/upload" scope="session" type="action.UploadAction">
-            <forward name="back2admin" path="upload_admin"/>
             <forward name="back2user" path="upload_user"/>
+            <forward name="back2admin" path="upload_admin"/>
         </action>
         
         <action path="/articleList" type="action.ArticleListAction">
             <forward name="articleListShowAdmin" path="articleList_admin"/>
             <forward name="articleListShowUser" path="articleList_user"/>
         </action>
+        
+        <action path="/pending" type="action.PendingAction">
+            <forward name="showPending" path="showPending_admin"/>
+        </action>
+        
+        <action path="/delPending" type="action.PendingDeleteAction">
+            <forward name="back2pending" path="/pending.do"/>
+        </action>
+        
+        <action path="/yesPending" type="action.PendingYesAction">
+            <forward name="back2pending" path="/pending.do"/>
+        </action>
+        
+        <action path="/articleDisplay" type="action.ArticleDisplay">
+            <forward name="articleDisplayAdmin" path="articleDisplay_admin"/>
+            <forward name="articleDisplayUser" path="articleDisplay_user"/>
+        </action>
+        
+        <action path="/trolls" type="action.TrollAction">
+            <forward name="trollsAdmin" path="trolls_admin"/>
+            <forward name="trollsUser" path="trolls_user"/>
+        </action>
+        
         
     </action-mappings>
       

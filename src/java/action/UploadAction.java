@@ -33,7 +33,7 @@ public class UploadAction extends org.apache.struts.action.Action {
         String role = (String) hss.getAttribute("role");
         
         FormFile file = ub.getUpArticle();
-        String filename = (file.getFileName()).substring(0, 7) + "@" + role.charAt(0) + "";
+        String filename = (file.getFileName()).substring(0, 4) + "@" + role + "";
         String path = getServlet().getServletContext().getRealPath("/") + "upload";
         File uploadfolder = new File(path);
         if (!uploadfolder.exists()) {

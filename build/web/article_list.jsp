@@ -13,7 +13,7 @@
             <center>
             <ul style="position:relative;left:20px;line-height:150%;">
             <c:forEach var="data" items="${requestScope.result.rows}">
-                <li><a href="#">${data.artName} by ${data.name}<a></li><br>
+                <li><a href="articleDisplay.do?artName=${data.artName}&name=${data.name}"> ${data.artName} by ${data.name}<a></li><br>
             </c:forEach>
             </ul>
             </center>

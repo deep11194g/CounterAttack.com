@@ -8,7 +8,7 @@
 
     <head>
         <title>Index</title>
-        <link rel="stylesheet" type="text/css"  />
+        <link rel="stylesheet" type="text/css" href="default.css"/>
         <style>
             #signin{position:absolute;right:20px;width:600px;height:300px;text-align:right;}
             #newusr{position:relative;top:400px;margin-left:auto;margin-right:auto;width:1200px;height:80px;}
@@ -46,4 +46,4 @@
      
     </body>
 
-</</h:html>
+</h:html>

@@ -13,7 +13,7 @@
                 New Password<h:password property="password" style="font-size:20px;width:200px;height:50px;"/>
                 <h:submit value="Change Password" style="height:50px;width:80px;font-size:20px;"/>
                 <br><font color="red" size="5">${requestScope.change_msg} </font>
-            </h:form>
+            </h:form><br><br><br>
         </center>
     </body>
 </html>
