@@ -11,10 +11,37 @@ public final class article_005fdisplay_jsp extends org.apache.jasper.runtime.Htt
 
   private static java.util.Vector _jspx_dependants;
 
+  static {
+    _jspx_dependants = new java.util.Vector(1);
+    _jspx_dependants.add("/WEB-INF/struts-html.tld");
+  }
+
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_html;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_javascript_formName_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_form_onsubmit_action;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_textarea_rows_property_cols_nobody;
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_h_submit_value_nobody;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public Object getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_h_html = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_h_javascript_formName_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_h_form_onsubmit_action = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_h_textarea_rows_property_cols_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+    _jspx_tagPool_h_submit_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_h_html.release();
+    _jspx_tagPool_h_javascript_formName_nobody.release();
+    _jspx_tagPool_h_form_onsubmit_action.release();
+    _jspx_tagPool_h_textarea_rows_property_cols_nobody.release();
+    _jspx_tagPool_h_submit_value_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -44,32 +71,10 @@ public final class article_005fdisplay_jsp extends org.apache.jasper.runtime.Htt
       out.write("\n");
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
-      out.write("<html>\n");
-      out.write("    <head>\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>ArticleDisplay</title>\n");
-      out.write("    </head>\n");
-      out.write("    <body>\n");
-      out.write("        \n");
-      out.write("        <div style=\"margin-right:500px;\">\n");
-      out.write("            <h1 style=\"text-decoration:underline;\">");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.artNname}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h1>\n");
-      out.write("            <h2>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</h2>\n");
       out.write("\n");
-      out.write("            <div style=\"margin-right:470px\">\n");
-      out.write("\t\t<!-- Text -->\n");
-      out.write("                <p>");
-      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.article}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-      out.write("</p>\n");
-      out.write("                    \n");
-      out.write("            </div>\n");
-      out.write("\t</div>\n");
-      out.write("        \n");
-      out.write("    </body>\n");
-      out.write("</html>\n");
+      if (_jspx_meth_h_html_0(_jspx_page_context))
+        return;
+      out.write('\n');
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -81,5 +86,155 @@ public final class article_005fdisplay_jsp extends org.apache.jasper.runtime.Htt
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_h_html_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  h:html
+    org.apache.struts.taglib.html.HtmlTag _jspx_th_h_html_0 = (org.apache.struts.taglib.html.HtmlTag) _jspx_tagPool_h_html.get(org.apache.struts.taglib.html.HtmlTag.class);
+    _jspx_th_h_html_0.setPageContext(_jspx_page_context);
+    _jspx_th_h_html_0.setParent(null);
+    int _jspx_eval_h_html_0 = _jspx_th_h_html_0.doStartTag();
+    if (_jspx_eval_h_html_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("    <head>\n");
+        out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
+        out.write("        <title>ArticleDisplay</title>\n");
+        out.write("    </head>\n");
+        out.write("    <body>\n");
+        out.write("        \n");
+        out.write("        <div style=\"margin-right:400px;margin-left:100px;\">\n");
+        out.write("            <h1 style=\"text-decoration:underline;\">");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.desc}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</h1>\n");
+        out.write("            <h2>by ");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</h2>\n");
+        out.write("\n");
+        out.write("            <div style=\"margin-right:50px;margin-left:200px;\">\n");
+        out.write("\t\t<!-- Text -->\n");
+        out.write("                <p>");
+        out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${requestScope.article}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+        out.write("</p>\n");
+        out.write("                \n");
+        out.write("                   \n");
+        out.write("            </div>\n");
+        out.write("\t</div>\n");
+        out.write("                ");
+        if (_jspx_meth_h_javascript_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_h_html_0, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("                ");
+        if (_jspx_meth_h_form_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_h_html_0, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("        \n");
+        out.write("    </body>\n");
+        int evalDoAfterBody = _jspx_th_h_html_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_h_html_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_h_html.reuse(_jspx_th_h_html_0);
+      return true;
+    }
+    _jspx_tagPool_h_html.reuse(_jspx_th_h_html_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_h_javascript_0(javax.servlet.jsp.tagext.JspTag _jspx_th_h_html_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  h:javascript
+    org.apache.struts.taglib.html.JavascriptValidatorTag _jspx_th_h_javascript_0 = (org.apache.struts.taglib.html.JavascriptValidatorTag) _jspx_tagPool_h_javascript_formName_nobody.get(org.apache.struts.taglib.html.JavascriptValidatorTag.class);
+    _jspx_th_h_javascript_0.setPageContext(_jspx_page_context);
+    _jspx_th_h_javascript_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_html_0);
+    _jspx_th_h_javascript_0.setFormName("CommentBean");
+    int _jspx_eval_h_javascript_0 = _jspx_th_h_javascript_0.doStartTag();
+    if (_jspx_th_h_javascript_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_h_javascript_formName_nobody.reuse(_jspx_th_h_javascript_0);
+      return true;
+    }
+    _jspx_tagPool_h_javascript_formName_nobody.reuse(_jspx_th_h_javascript_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_h_form_0(javax.servlet.jsp.tagext.JspTag _jspx_th_h_html_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  h:form
+    org.apache.struts.taglib.html.FormTag _jspx_th_h_form_0 = (org.apache.struts.taglib.html.FormTag) _jspx_tagPool_h_form_onsubmit_action.get(org.apache.struts.taglib.html.FormTag.class);
+    _jspx_th_h_form_0.setPageContext(_jspx_page_context);
+    _jspx_th_h_form_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_html_0);
+    _jspx_th_h_form_0.setAction("comment.do");
+    _jspx_th_h_form_0.setOnsubmit("return validateCommentBean(this)");
+    int _jspx_eval_h_form_0 = _jspx_th_h_form_0.doStartTag();
+    if (_jspx_eval_h_form_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+      do {
+        out.write("\n");
+        out.write("                    ");
+        if (_jspx_meth_h_textarea_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_h_form_0, _jspx_page_context))
+          return true;
+        out.write("<br>\n");
+        out.write("                    ");
+        if (_jspx_meth_h_submit_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_h_form_0, _jspx_page_context))
+          return true;
+        out.write("\n");
+        out.write("                ");
+        int evalDoAfterBody = _jspx_th_h_form_0.doAfterBody();
+        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+          break;
+      } while (true);
+    }
+    if (_jspx_th_h_form_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_h_form_onsubmit_action.reuse(_jspx_th_h_form_0);
+      return true;
+    }
+    _jspx_tagPool_h_form_onsubmit_action.reuse(_jspx_th_h_form_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_h_textarea_0(javax.servlet.jsp.tagext.JspTag _jspx_th_h_form_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  h:textarea
+    org.apache.struts.taglib.html.TextareaTag _jspx_th_h_textarea_0 = (org.apache.struts.taglib.html.TextareaTag) _jspx_tagPool_h_textarea_rows_property_cols_nobody.get(org.apache.struts.taglib.html.TextareaTag.class);
+    _jspx_th_h_textarea_0.setPageContext(_jspx_page_context);
+    _jspx_th_h_textarea_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_form_0);
+    _jspx_th_h_textarea_0.setProperty("comment");
+    _jspx_th_h_textarea_0.setRows("4");
+    _jspx_th_h_textarea_0.setCols("30");
+    int _jspx_eval_h_textarea_0 = _jspx_th_h_textarea_0.doStartTag();
+    if (_jspx_th_h_textarea_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_h_textarea_rows_property_cols_nobody.reuse(_jspx_th_h_textarea_0);
+      return true;
+    }
+    _jspx_tagPool_h_textarea_rows_property_cols_nobody.reuse(_jspx_th_h_textarea_0);
+    return false;
+  }
+
+  private boolean _jspx_meth_h_submit_0(javax.servlet.jsp.tagext.JspTag _jspx_th_h_form_0, PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  h:submit
+    org.apache.struts.taglib.html.SubmitTag _jspx_th_h_submit_0 = (org.apache.struts.taglib.html.SubmitTag) _jspx_tagPool_h_submit_value_nobody.get(org.apache.struts.taglib.html.SubmitTag.class);
+    _jspx_th_h_submit_0.setPageContext(_jspx_page_context);
+    _jspx_th_h_submit_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_h_form_0);
+    _jspx_th_h_submit_0.setValue("Submit");
+    int _jspx_eval_h_submit_0 = _jspx_th_h_submit_0.doStartTag();
+    if (_jspx_th_h_submit_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      _jspx_tagPool_h_submit_value_nobody.reuse(_jspx_th_h_submit_0);
+      return true;
+    }
+    _jspx_tagPool_h_submit_value_nobody.reuse(_jspx_th_h_submit_0);
+    return false;
   }
 }

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE struts-config PUBLIC
           "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
@@ -7,6 +7,8 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="UploadTrollsBean" type="bean.UploadTrollsBean"/>
+        <form-bean name="UploadTrollsAction" type="action.UploadTrollsAction"/>
         <form-bean name="TrollAction" type="action.TrollAction"/>
         <form-bean name="UploadAction" type="action.UploadAction"/>
         <form-bean name="UploadBean" type="bean.UploadBean"/>
@@ -95,7 +97,23 @@
             <forward name="trollsAdmin" path="trolls_admin"/>
             <forward name="trollsUser" path="trolls_user"/>
         </action>
+        <action path="/trollsRight" type="action.TrollsRightAction">
+            <forward name="trollsAdmin" path="trolls_admin"/>
+            <forward name="trollsUser" path="trolls_user"/>
+        </action>
+        <action path="/trollsLeft" type="action.TrollsLeftAction">
+            <forward name="trollsAdmin" path="trolls_admin"/>
+            <forward name="trollsUser" path="trolls_user"/>
+        </action>
         
+        <action path="/uploadTrolls" forward="trollsUpload" />
+        <action input="/trolls_upload.jsp" name="UploadTrollsBean" path="/submitTrolls" scope="session" type="action.UploadTrollsAction">
+            <forward name="back2trollsUpload" path="trollsUpload"/>
+        </action>
+        
+        <action input="/article_display.jsp" name="CommentBean" path="/comment" scope="session" type="action.CommentAction">
+            <forward name="back2articleDisplay" path="/articleDisplay.do"/>
+        </action>
         
     </action-mappings>
       

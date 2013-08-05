@@ -15,8 +15,6 @@ import org.apache.struts.action.ActionMapping;
 
 public class PendingAction extends org.apache.struts.action.Action {
 
-    private static final String SUCCESS = "success";
-
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)

@@ -3,7 +3,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
-
 <h:html>
 
     <head>
@@ -12,7 +11,6 @@
         <style>
             #signin{position:absolute;right:20px;width:600px;height:300px;text-align:right;}
             #newusr{position:relative;top:400px;margin-left:auto;margin-right:auto;width:1200px;height:80px;}
-
         </style>
     </head>
 
@@ -21,7 +19,11 @@
             <a href="landing.jsp"><img src="images/logo.png" style="float:left;"></a>
             <hr style="clear:left">
         </div>
-               
+           
+        <div id="background" style="position: fixed;z-index: -1;top: 0px;left: 0px;">
+            <img src="images/background_new.png" style="width: 100%;height:100%;">
+        </div>
+        
         <div id="signin">
             <img src="images/login.png">
             <h:javascript formName="LoginBean"/>

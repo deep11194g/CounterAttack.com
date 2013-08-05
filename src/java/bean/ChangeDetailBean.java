@@ -21,7 +21,7 @@ public class ChangeDetailBean extends org.apache.struts.action.ActionForm {
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
         ActionErrors errors = new ActionErrors();
         if (getPassword() == null || getPassword().length() < 1) {
-            errors.add("name", new ActionMessage("error.name.required"));
+            errors.add("password", new ActionMessage("error.password.required"));
         }
         return errors;
     }

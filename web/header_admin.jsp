@@ -4,7 +4,7 @@
 
 <html>
     <head>
-        <title>CounterAttack</title>
+        
         <link rel="stylesheet" type="text/css" />
         <style>
             ul#nav {margin: 0 0 0 200px;}

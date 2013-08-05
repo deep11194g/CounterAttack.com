@@ -7,16 +7,16 @@
 <tiles-definitions>
     
     <definition name="main_admin" path="/layout_admin.jsp">
+        <put name="body" value="/home_admin.jsp"/>
         <put name="header_admin" value="/header_admin.jsp"/>
         <put name="menu" value="/menu.jsp"/>
-        <put name="body" value="/home_admin.jsp"/>
         <put name="footer" value="/footer.jsp"/>
     </definition>
     
     <definition name="main_user" path="/layout_user.jsp">
+        <put name="body" value="/home_user.jsp"/>
         <put name="header_user" value="/header_user.jsp"/>
         <put name="menu" value="/menu.jsp"/>
-        <put name="body" value="/home_user.jsp"/>
         <put name="footer" value="/footer.jsp"/>
     </definition>
     
@@ -62,6 +62,10 @@
     
     <definition name="trolls_user" extends="main_user">
         <put name="body" value="/trolls.jsp"/>
+    </definition>
+    
+    <definition name="trollsUpload" extends="main_admin">
+        <put name="body" value="/trolls_upload.jsp"/>
     </definition>
     
     <!-- sample tiles definitions

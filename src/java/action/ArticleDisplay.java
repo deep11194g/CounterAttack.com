@@ -21,7 +21,7 @@ public class ArticleDisplay extends org.apache.struts.action.Action {
         HttpSession hs = request.getSession(false);
         String role = (String) hs.getAttribute("role");
 
-        String path = getServlet().getServletContext().getRealPath("/") + "upload/" + artName + ".txt";
+        String path = getServlet().getServletContext().getRealPath("/") + "articles/" + artName + ".txt";
         File f = new File(path);
         FileInputStream fis = new FileInputStream(f);
 

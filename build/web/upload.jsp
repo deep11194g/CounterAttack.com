@@ -8,7 +8,7 @@
     </head>
     <body>
         <center>
-        <h:form action="upload.do" method="post" enctype="multipart/form-data">
+        <h:form action="upload.do" method="post" enctype="multipart/form-data" onsubmit="return validateUploadBean(this)">
             Select: <h:file property="upArticle" style="font-size:20px;width:300px;height:50px;"/>
                     <font color="red" size="5">(.txt only)<br><br>
             <h:submit value="Submit article" style="height:30px;width:130px;font-size:20px;"/>

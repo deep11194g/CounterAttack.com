@@ -6,10 +6,6 @@
 
 <form-validation>
 
-<!--
-     This is a minimal Validator form file with a couple of examples.
--->
-
     <global>
 
         <!-- An example global constant
@@ -23,7 +19,6 @@
 
     <formset>
 
-        <!-- An example form -->
         <form name="LoginBean">
             <field property="name" depends="required, maxlength, minlength">
                 <arg key="login.user"/>
@@ -34,9 +29,9 @@
                 <arg2 key="10" resource="false"/>
                 <var>
                     <var-name>minlength</var-name>
-                    <var-value>7</var-value>
+                    <var-value>3</var-value>
                 </var>
-                <arg1 key="7" resource="false"/>
+                <arg1 key="3" resource="false"/>
             </field>
             
             <field property="password" depends="required,maxlength,minlength">
@@ -48,9 +43,9 @@
                 <arg2 key="10" resource="false"/>
                 <var>
                     <var-name>minlength</var-name>
-                    <var-value>7</var-value>
+                    <var-value>5</var-value>
                 </var>
-                <arg1 key="7" resource="false"/>
+                <arg1 key="5" resource="false"/>
             </field>
         </form>
 
@@ -64,9 +59,9 @@
                 <arg2 key="10" resource="false"/>
                 <var>
                     <var-name>minlength</var-name>
-                    <var-value>7</var-value>
+                    <var-value>3</var-value>
                 </var>
-                <arg1 key="7" resource="false"/>
+                <arg1 key="3" resource="false"/>
             </field>
             
             <field property="password" depends="required,maxlength,minlength">
@@ -78,9 +73,9 @@
                 <arg2 key="10" resource="false"/>
                 <var>
                     <var-name>minlength</var-name>
-                    <var-value>7</var-value>
+                    <var-value>5</var-value>
                 </var>
-                <arg1 key="7" resource="false"/>
+                <arg1 key="5" resource="false"/>
             </field>
         </form>
 
@@ -95,41 +90,80 @@
                 <arg2 key="10" resource="false"/>
                 <var>
                     <var-name>minlength</var-name>
-                    <var-value>7</var-value>
+                    <var-value>5</var-value>
                 </var>
-                <arg1 key="7" resource="false"/>
+                <arg1 key="5" resource="false"/>
+            </field>
+        </form>
+        
+        <form name="UploadBean">
+            <field property="upArticle" depends="required,minlength">
+                <arg key="upload"/>
             </field>
         </form>
 
+        <form name="UploadTrollsBean">
+            <field property="upTrolls" depends="required,minlength">
+                <arg key="upload"/>
+                <var>
+                <var-name>minlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+                <arg1 key="5" resource="false"/>
+            </field>
+        </form>
+        
+        <form name="UploadBean">
+            <field property="upArticle" depends="required,minlength">
+                <arg key="upload"/>
+                <var>
+                <var-name>minlength</var-name>
+                    <var-value>5</var-value>
+                </var>
+                <arg1 key="5" resource="false"/>
+            </field>
+        </form>
+        
+        <form name="CommentBean">
+            <field property="comment" depends="required,maxlength">
+                <arg key="comment"/>
+                <var>
+                    <var-name>maxlength</var-name>
+                    <var-value>110</var-value>
+                </var>
+                </field>
+            </form>
 
-    </formset>
+        </formset>
+
 
     <!-- An example formset for another locale -->
-    <formset language="fr">
+        <formset language="fr">
 
-        <constant>
-            <constant-name>postalCode</constant-name>
-            <constant-value>^[0-9a-zA-Z]*$</constant-value>
-        </constant>
+            <constant>
+                <arg2 key="110" resource="false"/>
+                <constant-name>postalCode</constant-name>
+                <constant-value>^[0-9a-zA-Z]*$</constant-value>
+            </constant>
 
         <!-- An example form -->
-        <form name="logonForm">
-            <field
-                property="username"
-                depends="required">
-                <arg key="logonForm.username"/>
-            </field>
-            <field
-                property="password"
-                depends="required,mask">
-                <arg key="logonForm.password"/>
-                <var>
-                    <var-name>mask</var-name>
-                    <var-value>^[0-9a-zA-Z]*$</var-value>
-                </var>
-            </field>
-        </form>
+            <form name="logonForm">
+                <field
+                    property="username"
+                    depends="required">
+                    <arg key="logonForm.username"/>
+                </field>
+                <field
+                    property="password"
+                    depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+                </field>
+            </form>
 
-    </formset>
+        </formset>
 
-</form-validation>
+    </form-validation>

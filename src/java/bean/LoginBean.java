@@ -30,8 +30,12 @@ public class LoginBean extends org.apache.struts.action.ActionForm {
    
      public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
         ActionErrors errors = new ActionErrors();
-        if (getName() == null || getPassword().length() < 1) {
+        if (getName() == null || getName().length() < 1) {
             errors.add("name", new ActionMessage("error.name.required"));
+        }
+        
+        if (getPassword() == null || getPassword().length() < 1) {
+            errors.add("name", new ActionMessage("error.password.required"));
         }
         return errors;
     }

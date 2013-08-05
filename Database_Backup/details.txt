@@ -1,5 +1,5 @@
-Database name : Bloggers
-Tables : login, uploadArticle
+Database name : bloggers
+Tables : login, uploadArticle, trolls
 
 username : root
 password : password

@@ -30,7 +30,9 @@
         
         
     <center>
-        <br><br><br><a href="pending.do"><i>Click to see pending articles.</i></a>
+        <br><br><br><a href="pending.do"><i>Click to see pending articles.</i></a><br>
+                    <a href="#"><i>Upload Debate of the week.</i></a><br>
+                    <a href="uploadTrolls.do"><i>Upload Troll Pics.</i></a><br>
     </center>
     </body>
 </html>

@@ -1,4 +1,3 @@
-
 package action;
 
 import javax.servlet.http.HttpServletRequest;
@@ -10,16 +9,18 @@ import org.apache.struts.action.ActionMapping;
 
 public class Logout extends org.apache.struts.action.Action {
 
-
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
+
+        HttpSession hs = request.getSession(false);
         
-        HttpSession hs=request.getSession(false);
+        hs.removeAttribute("name");
+        hs.removeAttribute("role");
         hs.invalidate();
-        hs=null;
-        
+        hs = null;
+
         return mapping.findForward("logout2index");
     }
 }

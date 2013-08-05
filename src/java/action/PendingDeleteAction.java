@@ -27,12 +27,11 @@ public class PendingDeleteAction extends org.apache.struts.action.Action {
         ps.setString(1, artName);
         int a = ps.executeUpdate();
 
-        File f = new File(getServlet().getServletContext().getRealPath("/") + "upload" + artName + ".txt");
-        f.delete();
-        FileReader fos=new FileReader(f);
+        File f = new File(getServlet().getServletContext().getRealPath("/") + "article" + artName + ".txt");
+        boolean b=f.delete();
+        f.deleteOnExit();
 
-
-        if (a == 1) {
+        if (a == 1 & b) {
             request.setAttribute("msg", artName + " is deleted.");
         }
 
