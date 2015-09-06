@@ -10,7 +10,20 @@ import java.sql.*;
 import javax.servlet.http.HttpSession;
 
 public class LoginAction extends org.apache.struts.action.Action {
-
+      
+    public static String stringToHexString(String s) {
+        try {
+            byte[] b = s.getBytes("UTF-16");
+            String result = "";
+            for (int i = 0; i < b.length; i++) {
+                result += Integer.toString((b[i] & 0xff) + 0x100, 16).substring(1);
+            }
+            return result;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+    
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
@@ -23,7 +36,7 @@ public class LoginAction extends org.apache.struts.action.Action {
         Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/bloggers", "root", "password");
         PreparedStatement ps = con.prepareStatement("select role from login where name=? and password=?");
         ps.setString(1, name);
-        ps.setString(2, pass);
+        ps.setString(2, stringToHexString(pass));
         ResultSet rs = ps.executeQuery();
 
         if (rs.next()) {

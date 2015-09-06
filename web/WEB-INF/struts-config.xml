@@ -20,14 +20,6 @@
     
     </form-beans>
     
-    <global-exceptions>
-    
-    </global-exceptions>
-
-    <global-forwards>
-        <forward name="welcome"  path="/Welcome.do"/>
-    </global-forwards>
-
     <action-mappings>      
     
         <action path="/index" type="action.IndexAction">
@@ -59,14 +51,14 @@
             <forward name="back2seeUsers" path="/seeUsers.do"/>
         </action>
         
-        <action input="changeDetail_user" name="ChangeDetailBean" path="/changeDetail" scope="session" type="action.ChangeDetailAction">
+        <action input="changeDetail_user" name="ChangeDetailBean" path="/changeDetail" scope="request" type="action.ChangeDetailAction">
             <forward name="back2changeDetail" path="changeDetail_user"/>
         </action>
         
         <action path="/uploadAdmin" forward="upload_admin" />
         <action path="/uploadUser" forward="upload_user" />
         
-        <action input="/upload.jsp" name="UploadBean" path="/upload" scope="session" type="action.UploadAction">
+        <action input="/upload.jsp" name="UploadBean" path="/upload" scope="request" type="action.UploadAction">
             <forward name="back2user" path="upload_user"/>
             <forward name="back2admin" path="upload_admin"/>
         </action>

@@ -11,12 +11,25 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 public class SignUpAction extends org.apache.struts.action.Action {
-
+    
+    public static String stringToHexString(String s) {
+        try {
+            byte[] b = s.getBytes("UTF-16");
+            String result = "";
+            for (int i = 0; i < b.length; i++) {
+                result += Integer.toString((b[i] & 0xff) + 0x100, 16).substring(1);
+            }
+            return result;
+        } catch (Exception e) {
+            return "";
+        }
+    }
+    
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
-
+        
         SignUpBean sb = (SignUpBean) form;
 
         String name = sb.getName();
@@ -28,7 +41,7 @@ public class SignUpAction extends org.apache.struts.action.Action {
 
             PreparedStatement ps = con.prepareStatement("insert into login values(?,?,?)");
             ps.setString(1, name);
-            ps.setString(2, pass);
+            ps.setString(2, stringToHexString(pass));
             ps.setString(3, "guest");
             int a = ps.executeUpdate();
             if (a == 1) {
@@ -40,7 +53,7 @@ public class SignUpAction extends org.apache.struts.action.Action {
             }
 
         } catch (Exception e) {
-            request.setAttribute("signup_msg", "Username already exists.");
+            request.setAttribute("signup_msg", "UUsername already exists.");
             return mapping.getInputForward();
         }
     }

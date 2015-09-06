@@ -1,13 +1,10 @@
 <%@taglib  prefix="h" uri="/WEB-INF/struts-html.tld" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
 
 <h:html>
 
     <head>
         <title>Index</title>
-        <link rel="stylesheet" type="text/css" href="default.css"/>
         <style>
             #signin{position:absolute;right:20px;width:600px;height:300px;text-align:right;}
             #newusr{position:relative;top:400px;margin-left:auto;margin-right:auto;width:1200px;height:80px;}

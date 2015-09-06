@@ -1,9 +1,9 @@
-<html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<html>    
 <body>
     <head>
         <title>Test</title>
-        <link rel="stylesheet" type="text/css" >
     </head>
 
     <!-- Menu -->
@@ -14,5 +14,4 @@
     </div>
 
 </body>
-
 </html>
