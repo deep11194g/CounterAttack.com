@@ -1,8 +1,0 @@
-An introduction 2 linux world
-Owners of Proprietary Software's closely guard their Source code, and thus cannot be modified by anyone except them.
-On the contrary, Open Source software means, the source code of the software is OPEN to general public.
-Programmers can read,redistribute, and modify the source for a piece of software.People adapt it, improve it and fix bugs. And this can happen at a speed that,compared to conventional software development, seems astonishing.
-The term Free is in the sense, freedom to copy and re-use the software source, rather than to the price of the software.
-To understand the concept, one should-
-"think of free as in free speech, not as in free beer".
-Though Open Source are mostly free of cost there are few exceptions like ZendStudio,houdini.
